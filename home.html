@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-screen overflow-hidden">
@@ -10,7 +11,7 @@
     <!-- Side panel begins-->
       <div class="sticky left-0 h-screen basis-1/4 bg-slate-800 pt-12 px-5 hidden sm:block">
 
-      <div class="flex justify-between pb-10 border-b border-slate-700">
+        <div class="flex justify-between pb-10 border-b border-slate-700">
         <!-- Company logo image -->
           <img class="w-28 lg:w-auto" src ="assets/company-logo.svg" alt="Company Logo SVG"/>
 
@@ -19,7 +20,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="#9da3b3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 8h-9m9 4H4m0 0l3-3m-3 3l3 3m13 1h-9"/></svg>
           </button>
 
-      </div>
+        </div>
 
         <!-- Panel button column begins-->
           <div class="columns-1 my-6 h-5/6 relative">
@@ -44,8 +45,7 @@
 
         </div>
         <!-- Panel button column ends-->
-
-    </div>
+      </div>
     <!-- Side panel ends -->
 
     <!-- Home page content begins -->
@@ -108,7 +108,24 @@
               <div class="relative pl-0 pr-6 mb-9">
                 <svg class="w-32 lg:w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="145" height="145" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="#D9D9D9" d="M491 326V92.143C491 79.021 480.259 68 467.137 68H341.13c-9.287 0-17.723 5.603-21.596 14.044l-12.709 27.903C302.952 118.388 294.516 124 285.229 124H67.538C54.416 124 44 134.426 44 147.549v216.363C44 377.034 54.416 388 67.538 388h399.599c.628 0 1.248-.36 1.863-.408V433h.342c0 6 4.877 10.636 10.829
                 10.636c5.952 0 10.829-4.967 10.829-10.919V326z"/><path fill="#8BE1F3" d="M480.171 443.636c-5.952 0-10.829-4.636-10.829-10.636H469V210.181C469 197.058 458.661 186 445.539 186H45.94C32.818 186 22 197.058 22 210.181V449.37C22 462.492 32.818 473 45.94 473h399.599c1.385 0 2.741-.06 4.061-.288c1.639.227 3.31.385 5.012.385c20.04 0 36.136-16.229 36.136-36.269c0-.534-.036-1.058-.058-1.586c-1.147 4.766-5.435 8.394-10.519 8.394z"/></svg>
-                <svg class="absolute top-3.5 right-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
+
+                <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom" class="absolute top-3.5 right-0"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownBottom" class="z-10 hidden bg-white rounded shadow w-36 dark:bg-slate-800">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">Open</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">Download</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">View info</a>
+                      </li>
+                    </ul>
+                </div>
+
                 <p class="text-center mt-4">Folder A</p>
               </div>
 
@@ -116,7 +133,9 @@
               <div class="relative pl-0 pr-6 mb-9">
                 <svg class="w-32 lg:w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="145" height="145" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="#D9D9D9" d="M491 326V92.143C491 79.021 480.259 68 467.137 68H341.13c-9.287 0-17.723 5.603-21.596 14.044l-12.709 27.903C302.952 118.388 294.516 124 285.229 124H67.538C54.416 124 44 134.426 44 147.549v216.363C44 377.034 54.416 388 67.538 388h399.599c.628 0 1.248-.36 1.863-.408V433h.342c0 6 4.877 10.636 10.829
                 10.636c5.952 0 10.829-4.967 10.829-10.919V326z"/><path fill="#8BE1F3" d="M480.171 443.636c-5.952 0-10.829-4.636-10.829-10.636H469V210.181C469 197.058 458.661 186 445.539 186H45.94C32.818 186 22 197.058 22 210.181V449.37C22 462.492 32.818 473 45.94 473h399.599c1.385 0 2.741-.06 4.061-.288c1.639.227 3.31.385 5.012.385c20.04 0 36.136-16.229 36.136-36.269c0-.534-.036-1.058-.058-1.586c-1.147 4.766-5.435 8.394-10.519 8.394z"/></svg>
-                <svg class="absolute top-3.5 right-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
+
+                <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom" class="absolute top-3.5 right-0"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
                 <p class="text-center mt-4">Folder B</p>
               </div>
 
@@ -124,7 +143,9 @@
               <div class="relative pl-0 pr-6 mb-9">
                 <svg class="w-32 lg:w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="145" height="145" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="#D9D9D9" d="M491 326V92.143C491 79.021 480.259 68 467.137 68H341.13c-9.287 0-17.723 5.603-21.596 14.044l-12.709 27.903C302.952 118.388 294.516 124 285.229 124H67.538C54.416 124 44 134.426 44 147.549v216.363C44 377.034 54.416 388 67.538 388h399.599c.628 0 1.248-.36 1.863-.408V433h.342c0 6 4.877 10.636 10.829
                 10.636c5.952 0 10.829-4.967 10.829-10.919V326z"/><path fill="#8BE1F3" d="M480.171 443.636c-5.952 0-10.829-4.636-10.829-10.636H469V210.181C469 197.058 458.661 186 445.539 186H45.94C32.818 186 22 197.058 22 210.181V449.37C22 462.492 32.818 473 45.94 473h399.599c1.385 0 2.741-.06 4.061-.288c1.639.227 3.31.385 5.012.385c20.04 0 36.136-16.229 36.136-36.269c0-.534-.036-1.058-.058-1.586c-1.147 4.766-5.435 8.394-10.519 8.394z"/></svg>
-                <svg class="absolute top-3.5 right-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
+
+                <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom" class="absolute top-3.5 right-0"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
                 <p class="text-center mt-4">Folder C</p>
               </div>
 
@@ -132,11 +153,13 @@
               <div class="relative pl-0 pr-6 mb-9">
                 <svg class="w-32 lg:w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="145" height="145" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="#D9D9D9" d="M491 326V92.143C491 79.021 480.259 68 467.137 68H341.13c-9.287 0-17.723 5.603-21.596 14.044l-12.709 27.903C302.952 118.388 294.516 124 285.229 124H67.538C54.416 124 44 134.426 44 147.549v216.363C44 377.034 54.416 388 67.538 388h399.599c.628 0 1.248-.36 1.863-.408V433h.342c0 6 4.877 10.636 10.829
                 10.636c5.952 0 10.829-4.967 10.829-10.919V326z"/><path fill="#8BE1F3" d="M480.171 443.636c-5.952 0-10.829-4.636-10.829-10.636H469V210.181C469 197.058 458.661 186 445.539 186H45.94C32.818 186 22 197.058 22 210.181V449.37C22 462.492 32.818 473 45.94 473h399.599c1.385 0 2.741-.06 4.061-.288c1.639.227 3.31.385 5.012.385c20.04 0 36.136-16.229 36.136-36.269c0-.534-.036-1.058-.058-1.586c-1.147 4.766-5.435 8.394-10.519 8.394z"/></svg>
-                <svg class="absolute top-3.5 right-0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
+
+                <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom" class="absolute top-3.5 right-0"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
                 <p class="text-center mt-4">Folder D</p>
               </div>
 
-          </div>
+            </div>
           </section>
         <!-- Folder grid view section ends -->
 
@@ -144,40 +167,134 @@
           <section class="pl-8 pr-8 pb-8">
             <h6>Files</h6>
             <div class="mt-7 flex flex-row flex-wrap items-center justify-between">
+
                 <!-- File -->
-                  <div class="mb-9">
-                    <div class="w-36 h-36 lg:w-60 lg:h-60 py-2 sm:py-4 border border-slate-20 bg-zinc-100 rounded relative">
-                      <svg class="absolute top-1 right-0.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
-                      <div class="block m-auto w-24 h-32 lg:w-36 lg:h-52 bg-white">
-                        <img class="w-16 p-3" src="assets/company-logo.svg" alt="The Remote Company Logo">
+                  <div class="mb-9 relative">
+
+                    <!-- Extra Large Modal -->
+                    <div id="extralarge-modalDoc" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                      <div class="relative p-12 w-full max-w-7xl h-full md:h-auto">
+                          <!-- Modal content -->
+                          <div class="relative bg-white rounded-lg shadow dark:bg-slate-100">
+                              <!-- Modal body -->
+                              <div class="p-6">
+                                <button type="button" class="absolute right-5 text-gray-400 bg-transparent hover:bg-slate-600 hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="extralarge-modalDoc">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                <img src="assets/company-letter.jpg" alt="The Remote Company Letter" class="w-1/2 m-auto">
+                              </div>
+                          </div>
                       </div>
+                    </div>
+
+                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottomFile" data-dropdown-placement="bottom" class="absolute top-1 -right-6"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
+                    <div class="w-36 h-36 lg:w-56 lg:h-56 py-2 sm:py-4 border border-slate-20 bg-zinc-100 rounded relative cursor-pointer" type="button" data-modal-toggle="extralarge-modalDoc">
+
+                      <!-- Dropdown menu -->
+                      <div id="dropdownBottomFile" class="z-10 hidden bg-white rounded shadow w-36 dark:bg-slate-800">
+                          <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">Preview</a>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">Find in folder</a>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">Download</a>
+                            </li>
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-slate-600 dark:hover:bg-gray-600 dark:hover:text-white">View info</a>
+                            </li>
+                          </ul>
+                      </div>
+
+                        <img class="w-8/12 m-auto" src="assets/company-letter.jpg" alt="The Remote Company Letter">
+
                     </div>
                     <p class="text-center mt-4">Document.pdf</p>
                   </div>
 
                 <!-- File -->
-                  <div class="mb-9">
-                    <div class="w-36 h-36 lg:w-60 lg:h-60 py-8 lg:py-16 border border-slate-20 bg-zinc-100 rounded relative">
-                      <svg class="absolute top-1 right-0.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
+                  <div class="mb-9 relative">
+
+                    <!-- Extra Large Modal -->
+                    <div id="extralarge-modalZip" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                      <div class="relative p-12 w-full max-w-7xl h-full md:h-auto">
+                          <!-- Modal content -->
+                          <div class="relative bg-white rounded-lg shadow dark:bg-slate-100">
+                              <!-- Modal body -->
+                              <div class="p-6">
+                                <button type="button" class="absolute right-5 text-gray-400 bg-transparent hover:bg-slate-600 hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="extralarge-modalZip">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                  <p>Insert file.zip details</p>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottomFile" data-dropdown-placement="bottom" class="absolute top-1 -right-6"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
+                    <div class="w-36 h-36 lg:w-56 lg:h-56 py-8 lg:py-16 border border-slate-20 bg-zinc-100 rounded relative cursor-pointer" type="button" data-modal-toggle="extralarge-modalZip">
+
                       <svg class="block m-auto w-20 h-20 sm:w-100 sm:h-100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="100" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#ebebeb"><path d="M5.5 9.438V8.5h1v.938a1 1 0 0 0 .03.243l.4 1.598l-.93.62l-.93-.62l.4-1.598a1 1 0 0 0 .03-.243z"/><path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-4-.5V2h-1V1H6v1h1v1H6v1h1v1H6v1h1v1H5.5V6h-1V5h1V4h-1V3h1zm0 4.5h1a1 1 0 0 1 1 1v.938l.4 1.599a1 1 0 0 1-.416 1.074l-.93.62a1 1 0 0 1-1.109 0l-.93-.62a1 1 0 0 1-.415-1.074l.4-1.599V8.5a1 1 0 0 1 1-1z"/></g></svg>
                     </div>
                     <p class="text-center mt-4">File.zip</p>
                   </div>
 
                 <!-- File -->
-                  <div class="mb-9">
-                    <div class="w-36 h-36 lg:w-60 lg:h-60 py-6 sm:py-6 lg:py-16 border border-slate-20 bg-zinc-100 rounded relative">
-                      <svg class="absolute top-1 right-0.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
+                  <div class="mb-9 relative">
+
+                    <!-- Extra Large Modal -->
+                    <div id="extralarge-modalHTML" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                      <div class="relative p-12 w-full max-w-7xl h-full md:h-auto">
+                          <!-- Modal content -->
+                          <div class="relative bg-white rounded-lg shadow dark:bg-slate-100">
+                              <!-- Modal body -->
+                              <div class="p-6">
+                                <button type="button" class="absolute right-5 text-gray-400 bg-transparent hover:bg-slate-600 hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="extralarge-modalHTML">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                <p>Paste HTML code</p>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottomFile" data-dropdown-placement="bottom" class="absolute top-1 -right-6"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
+                    <div class="w-36 h-36 lg:w-56 lg:h-56 py-6 sm:py-6 lg:py-16 border border-slate-20 bg-zinc-100 rounded relative cursor-pointer" type="button" data-modal-toggle="extralarge-modalHTML">
+
                       <svg class="block m-auto w-24 h-24 sm:w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="110" height="110" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#ebebeb" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM8.531 18h-.76v-1.411H6.515V18h-.767v-3.373h.767v1.296h1.257v-1.296h.76V18zm3-2.732h-.921V18h-.766v-2.732h-.905v-.641h2.592v.641zM14.818 18l-.05-1.291c-.017-.405-.03-.896-.03-1.387h-.016c-.104.431-.245.911-.375 1.307l-.41 1.316h-.597l-.359-1.307a15.154 15.154 0 0 1-.306-1.316h-.011c-.021.456-.034.976-.059 1.396L12.545 18h-.705l.216-3.373h1.015l.331 1.126c.104.391.21.811.284 1.206h.017c.095-.391.209-.836.32-1.211l.359-1.121h.996L15.563 18h-.745zm3.434 0h-2.108v-3.373h.767v2.732h1.342V18z"/></svg>
                     </div>
                     <p class="text-center mt-4">Snippet.html</p>
                   </div>
 
                 <!-- File -->
-                  <div class="mb-9">
-                    <div class="w-36 h-36 lg:w-60 lg:h-60 py-10 sm:py-12 lg:py-16 border border-slate-20 bg-zinc-100 rounded relative">
-                      <svg class="absolute top-1 right-0.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg>
-                      <img class="block m-auto w-28 sm:w-28 lg:w-48" src="assets/remote-work.jpg" alt="Remote Work Image">
+                <div class="mb-9 relative">
+
+                  <!-- Extra Large Modal -->
+                  <div id="extralarge-modalIMG" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                    <div class="relative p-12 w-full max-w-7xl h-full md:h-auto">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-slate-100">
+                            <!-- Modal body -->
+                            <div class="p-6">
+                              <button type="button" class="absolute right-5 text-gray-400 bg-transparent hover:bg-slate-600 hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="extralarge-modalIMG">
+                                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                              </button>
+                              <img src="assets/remote-work.jpeg" alt="Remote Work Image" class="w-11/12 m-auto">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottomFile" data-dropdown-placement="bottom" class="absolute top-1 -right-6"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#171d2d" d="M12 20a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm0-6a2 2 0 1 1 0-4a2 2 0 0 1 0 4Z"/></svg></button>
+
+                    <div class="w-36 h-36 lg:w-56 lg:h-56 py-10 sm:py-12 border border-slate-20 bg-zinc-100 rounded relative cursor-pointer" type="button" data-modal-toggle="extralarge-modalIMG">
+
+                      <img class="block m-auto w-28 sm:w-28 lg:w-48" src="assets/remote-work.jpeg" alt="Remote Work Image">
                     </div>
                     <p class="text-center mt-4">Image.jpg</p>
                   </div>
@@ -229,5 +346,6 @@
     <!-- Home page content ends -->
 
     </div>
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 </body>
 </html>
